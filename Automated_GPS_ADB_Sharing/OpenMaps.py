@@ -6,7 +6,7 @@ import subprocess
 import pyperclip
 import re
 
-phone_number = "+201120677897"
+phone_number = "+11111111111"
 location = ()  # location tuple
 def open_google_maps():
     # Open the default web browser and navigate to Google Maps
