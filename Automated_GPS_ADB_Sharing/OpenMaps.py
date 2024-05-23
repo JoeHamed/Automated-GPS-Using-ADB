@@ -34,10 +34,10 @@ def paste_coordinates(lat, lon):
     pyautogui.press('enter')  # Press Enter to search
     sleep(2)
     pyautogui.click(x=1499, y=476)  # click on the share button
-    sleep(2)
-    pyautogui.click(x=796, y=610)  # copy link
+    sleep(3)
+    pyautogui.click(x=766, y=610)  # copy link
     pyautogui.doubleClick()
-    sleep(2)
+    sleep(3)
     try:
         kit.sendwhatmsg_instantly(phone_number, pyperclip.paste())
     finally:
@@ -60,7 +60,6 @@ def get_gps_location():
                 provider, latitude, longitude = match
                 print(f"Provider: {provider}, Latitude: {latitude}, Longitude: {longitude}")
                 location = (latitude, longitude)
-                return location
         else:
             print("No location found")
 
@@ -68,6 +67,8 @@ def get_gps_location():
         print(f"Error executing adb command: {e}")
 
 if __name__ == "__main__":
-    location = get_gps_location()
-    open_google_maps()
-    paste_coordinates(float(location[0]), float(location[1]))
+        while True:
+        get_gps_location()
+        open_google_maps()
+        paste_coordinates(float(location[0]), float(location[1]))
+        sleep(60) #get the location every Minute
