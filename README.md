@@ -1,4 +1,4 @@
-# Project Description: GPS Location Tracking and Sharing Automation
+# GPS Location Tracking and Sharing Automation
 This project consists of two Python scripts, GPSTracking.py and OpenMaps.py, which are designed to work together to automate the process of extracting, displaying, and sharing GPS coordinates obtained from an Android device. By leveraging the Android Debug Bridge (ADB) and automation libraries, the project simplifies tasks such as location extraction, map navigation, and message sharing via WhatsApp.
 
 ## Scripts Overview
