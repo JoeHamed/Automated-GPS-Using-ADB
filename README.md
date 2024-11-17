@@ -34,18 +34,18 @@ This project is ideal for scenarios where automated location tracking and sharin
 - Remote Assistance: Sends precise GPS coordinates for navigation assistance.
 
 ## How It Works
-1. Location Extraction:
+#### 1. Location Extraction:
 - ADB retrieves the device's last known location via the dumpsys location command.
 - The script parses the output to extract latitude and longitude.
-2. Map Navigation:
+#### 2. Map Navigation:
 - The GPS coordinates are entered into Google Maps through a browser automation process.
 - The script retrieves the shareable link for the location.
-3. Message Sending:
+#### 3. Message Sending:
 - The location link is shared via WhatsApp to a predefined phone number using automation tools.
 
 ## Limitations and Considerations
-Device Connectivity: Requires an Android device connected and ADB enabled.
+- **Device Connectivity**: Requires an Android device connected and ADB enabled.
 Screen Resolution: PyAutoGUI coordinates may need adjustment for different screen setups.
-Permission Constraints: Ensure necessary permissions are granted on the Android device for GPS access.
-WhatsApp Web Login: Requires WhatsApp Web to be pre-configured and logged in on the system.
+- **Permission Constraints**: Ensure necessary permissions are granted on the Android device for GPS access.
+- **WhatsApp Web Login**: Requires WhatsApp Web to be pre-configured and logged in on the system.
 This project demonstrates the integration of Python scripting, system utilities, and automation libraries to create a robust tool for GPS tracking and sharing.
