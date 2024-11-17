@@ -19,29 +19,29 @@ Uses automation to interact with the browser and clipboard for seamless operatio
 Runs periodically (default interval: 1 minute) to retrieve and share updated location data.
 
 ## Core Dependencies
-Android Debug Bridge (ADB): Used to extract the GPS location from the Android device.
-PyAutoGUI: Automates GUI interactions, such as clicking and typing.
-PyWhatKit: Sends messages via WhatsApp.
-Pyperclip: Manages clipboard operations for copying and pasting text.
-Regular Expressions (re): Parses the ADB output to extract relevant GPS information.
-Webbrowser: Opens Google Maps in the default browser.
-Time and Sleep: Manages periodic execution.
+- Android Debug Bridge (ADB): Used to extract the GPS location from the Android device.
+- PyAutoGUI: Automates GUI interactions, such as clicking and typing.
+- PyWhatKit: Sends messages via WhatsApp.
+- Pyperclip: Manages clipboard operations for copying and pasting text.
+- Regular Expressions (re): Parses the ADB output to extract relevant GPS information.
+- Webbrowser: Opens Google Maps in the default browser.
+- Time and Sleep: Manages periodic execution.
 
 ## Use Case
 This project is ideal for scenarios where automated location tracking and sharing are required, such as:
-Real-Time Location Monitoring: Continuously fetches and logs GPS data from a device.
-Emergency Sharing: Quickly shares location links via WhatsApp in emergencies.
-Remote Assistance: Sends precise GPS coordinates for navigation assistance.
+- Real-Time Location Monitoring: Continuously fetches and logs GPS data from a device.
+- Emergency Sharing: Quickly shares location links via WhatsApp in emergencies.
+- Remote Assistance: Sends precise GPS coordinates for navigation assistance.
 
 ## How It Works
-Location Extraction:
-ADB retrieves the device's last known location via the dumpsys location command.
-The script parses the output to extract latitude and longitude.
-Map Navigation:
-The GPS coordinates are entered into Google Maps through a browser automation process.
-The script retrieves the shareable link for the location.
-Message Sending:
-The location link is shared via WhatsApp to a predefined phone number using automation tools.
+1. Location Extraction:
+- ADB retrieves the device's last known location via the dumpsys location command.
+- The script parses the output to extract latitude and longitude.
+2. Map Navigation:
+- The GPS coordinates are entered into Google Maps through a browser automation process.
+- The script retrieves the shareable link for the location.
+3. Message Sending:
+- The location link is shared via WhatsApp to a predefined phone number using automation tools.
 
 ## Limitations and Considerations
 Device Connectivity: Requires an Android device connected and ADB enabled.
